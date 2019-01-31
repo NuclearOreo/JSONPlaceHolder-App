@@ -7,7 +7,7 @@ import { JsonplaceholderService } from '../jsonplaceholder.service';
   styleUrls: ['./comments.component.css']
 })
 export class CommentsComponent implements OnInit {
-  comments:any;
+  private comments:any;
 
   constructor(private service:JsonplaceholderService) { }
 

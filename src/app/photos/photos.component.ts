@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { JsonplaceholderService } from '../jsonplaceholder.service';
 
 @Component({
   selector: 'app-photos',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./photos.component.css']
 })
 export class PhotosComponent implements OnInit {
+  private photos:object;
 
-  constructor() { }
+  constructor(private service: JsonplaceholderService) { }
 
   ngOnInit() {
+    this.service.getPhoto().subscribe(
+      (res) => {
+        this.photos = res;
+      }
+    );
   }
 
 }

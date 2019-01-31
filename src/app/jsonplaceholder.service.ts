@@ -17,4 +17,8 @@ export class JsonplaceholderService {
   getComment(){
     return this.http.get(this.url + 'comments');
   }
+
+  getPhoto(){
+    return this.http.get(this.url + 'photos')
+  }
 }
