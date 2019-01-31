@@ -8,7 +8,7 @@ import { JsonplaceholderService } from '../jsonplaceholder.service';
   styleUrls: ['./posts.component.css']
 })
 export class PostsComponent implements OnInit {
-  private list:any;
+  list:any;
 
   constructor(private service: JsonplaceholderService) { }
 

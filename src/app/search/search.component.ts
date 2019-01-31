@@ -8,8 +8,8 @@ import { JsonplaceholderService } from '../jsonplaceholder.service';
 })
 export class SearchComponent implements OnInit {
 
-  private username:string = '';
-  private posts:object;
+  username:string = '';
+  posts:object;
 
   constructor(private service:JsonplaceholderService) { }
 

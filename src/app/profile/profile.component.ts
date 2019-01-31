@@ -8,7 +8,7 @@ import { JsonplaceholderService } from '../jsonplaceholder.service';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
-  private user:object;
+  user:object;
 
   constructor(private route: ActivatedRoute, private service:JsonplaceholderService) { }
 

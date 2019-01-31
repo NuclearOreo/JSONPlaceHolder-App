@@ -7,7 +7,7 @@ import { JsonplaceholderService } from '../jsonplaceholder.service';
   styleUrls: ['./photos.component.css']
 })
 export class PhotosComponent implements OnInit {
-  private photos: object;
+  photos: object;
 
   constructor(private service: JsonplaceholderService) { }
 

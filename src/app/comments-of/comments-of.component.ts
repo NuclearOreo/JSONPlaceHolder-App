@@ -8,8 +8,8 @@ import { JsonplaceholderService } from '../jsonplaceholder.service';
   styleUrls: ['./comments-of.component.css']
 })
 export class CommentsOfComponent implements OnInit {
-  private comments:object;
-  private user:object;
+  comments:object;
+  user:object;
 
   constructor(private route: ActivatedRoute, private service:JsonplaceholderService) { }
 
