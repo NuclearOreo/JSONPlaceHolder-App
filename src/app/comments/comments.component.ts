@@ -15,7 +15,6 @@ export class CommentsComponent implements OnInit {
     this.service.getComment().subscribe(
       (res) => {
         this.comments = res;
-        console.log(this.comments);
       }
     )
   }

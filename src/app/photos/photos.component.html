@@ -1,14 +1,26 @@
 <div class="container">
-  <h1>Hello World</h1>
+  <br>
+  <h1 align="center"><b>First 100 Images</b></h1>
+  <br>
   <div *ngIf="photos">
-    <div *ngFor="let item of photos; let i = index">
-      <div *ngIf="i<100">
-        <br>
-        {{ item.title }}
-        <br>
-        {{item.thumbnailUrl}}
-        <br>
+
+    <div class="row card-group">
+      <div class="col-4"  *ngFor="let item of photos; let i = index">
+
+        <div *ngIf="i < 100 ">
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="{{item.thumbnailUrl}}" alt="Card image cap">
+            <div class="card-body">
+              <p class="card-text">{{ item.title }}</p>
+              <a href="{{ item.url }}">Original Image</a>
+            </div>
+          </div>
+          <br>
+        </div>
+
       </div>
     </div>
+
   </div>
+  <br>
 </div>
