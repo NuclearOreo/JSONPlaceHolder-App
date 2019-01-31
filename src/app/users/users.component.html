@@ -8,7 +8,7 @@
     <div class="card">
       <img class="card-img-top" src="assets/img/{{ item.username }}.jpg" alt="Card image cap">
       <div class="card-body">
-        <h5 class="card-title"><a routerLink="profile/{{ item.username }}">{{ item.name }} </a> </h5>
+        <h5 class="card-title"><a routerLink="{{ item.username }}">{{ item.name }} </a> </h5>
         <p class="card-text"> Catch Phrase: {{ item.company.catchPhrase }}</p>
         <p class="card-text"> BS: {{ item.company.bs }}</p>
         <p class="card-text"><small class="text-muted">

@@ -22,7 +22,12 @@ export class JsonplaceholderService {
     return this.http.get(this.url + 'photos');
   }
 
-  getUser(){
-    return this.http.get(this.url + 'users');
+  getUser(username?:string){
+    if(username == undefined) {
+      return this.http.get(this.url + 'users');
+    } else {
+      return this.http.get(this.url + "users?username=" + username);
+    }
   }
+
 }
