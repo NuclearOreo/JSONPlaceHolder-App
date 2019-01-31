@@ -7,6 +7,10 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { LostComponent } from './lost/lost.component';
+import { PostsComponent } from './posts/posts.component';
+import { CommentsComponent } from './comments/comments.component';
+import { PhotosComponent } from './photos/photos.component';
+import { UsersComponent } from './users/users.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +18,11 @@ import { LostComponent } from './lost/lost.component';
     NavbarComponent,
     FooterComponent,
     HomeComponent,
-    LostComponent
+    LostComponent,
+    PostsComponent,
+    CommentsComponent,
+    PhotosComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,
