@@ -14,7 +14,8 @@ import { PhotosComponent } from './photos/photos.component';
 import { UsersComponent } from './users/users.component';
 import { JsonplaceholderService } from './jsonplaceholder.service';
 import { ProfileComponent } from './profile/profile.component';
-import { CommentsOfComponent } from './comments-of/comments-of.component'
+import { CommentsOfComponent } from './comments-of/comments-of.component';
+import { SearchComponent } from './search/search.component'
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { CommentsOfComponent } from './comments-of/comments-of.component'
     PhotosComponent,
     UsersComponent,
     ProfileComponent,
-    CommentsOfComponent
+    CommentsOfComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
