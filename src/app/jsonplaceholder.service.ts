@@ -14,19 +14,25 @@ export class JsonplaceholderService {
     return this.http.get(this.url + 'posts');
   }
 
-  getComment(){
-    return this.http.get(this.url + 'comments');
+  getComment(postId?:string){
+    if(postId == undefined) {
+      return this.http.get(this.url + 'comments');
+    } else {
+      return this.http.get(this.url + 'comments?postId=' + postId);
+    }
   }
 
   getPhoto(){
     return this.http.get(this.url + 'photos');
   }
 
-  getUser(username?:string){
-    if(username == undefined) {
+  getUser(username?:string, id?:string){
+    if(username == undefined && id == undefined) {
       return this.http.get(this.url + 'users');
-    } else {
+    } else if (username != undefined) {
       return this.http.get(this.url + "users?username=" + username);
+    } else if (id != undefined) {
+      return this.http.get(this.url + "users?id=" + id);
     }
   }
 

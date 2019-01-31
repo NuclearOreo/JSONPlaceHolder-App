@@ -1,3 +1,28 @@
-<p>
-  comments-of works!
-</p>
+<br>
+<div class="container" align="center">
+  <div id="accordion">
+
+    <div *ngIf="comments">
+      <h1><b>List of Comments for {{user[0].name}} </b></h1>
+      <div *ngFor="let item of comments">
+
+        <div class="card">
+          <div class="card-header">
+            Name: {{ item.name}}
+          </div>
+          <div class="card-body">
+            <blockquote class="blockquote mb-0">
+              <p> {{ item.body }} </p>
+              <footer class="blockquote-footer"> UserEmail: {{ item.email }}  </footer>
+            </blockquote>
+          </div>
+        </div>
+
+        <br>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+<br>

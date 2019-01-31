@@ -16,7 +16,7 @@ export class ProfileComponent implements OnInit {
     this.route.paramMap.subscribe(
       (res) => {
         let username = res.get("username");
-        this.service.getUser(username).subscribe(
+        this.service.getUser(username, undefined).subscribe(
           (res) => {
             this.user = res;
           }
