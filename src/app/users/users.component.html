@@ -1,3 +1,22 @@
-<p>
-  users works!
-</p>
+<div class="container">
+
+  <br>
+
+  <div class="card-deck">
+
+  <div class="col-4"  *ngFor="let item of users">
+    <div class="card">
+      <img class="card-img-top" src="#" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{ item.name }}</h5>
+        <p class="card-text"> Catch Phrase: {{ item.company.catchPhrase }}</p>
+        <p class="card-text"> BS: {{ item.company.bs }}</p>
+        <p class="card-text"><small class="text-muted"><a href="http://{{ item.website }}">Website</a></small></p>
+      </div>
+    </div>
+    <br>
+  </div>
+
+  <br>
+
+</div>

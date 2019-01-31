@@ -19,6 +19,10 @@ export class JsonplaceholderService {
   }
 
   getPhoto(){
-    return this.http.get(this.url + 'photos')
+    return this.http.get(this.url + 'photos');
+  }
+
+  getUser(){
+    return this.http.get(this.url + 'users');
   }
 }
