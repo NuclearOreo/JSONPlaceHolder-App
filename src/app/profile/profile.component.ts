@@ -8,6 +8,7 @@ import { JsonplaceholderService } from '../jsonplaceholder.service';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
+  private user:object;
 
   constructor(private route: ActivatedRoute, private service:JsonplaceholderService) { }
 
@@ -17,7 +18,7 @@ export class ProfileComponent implements OnInit {
         let username = res.get("username");
         this.service.getUser(username).subscribe(
           (res) => {
-            console.log(res);
+            this.user = res;
           }
         );
       }

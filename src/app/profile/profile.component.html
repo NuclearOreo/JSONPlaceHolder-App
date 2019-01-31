@@ -1,3 +1,57 @@
-<p>
-  profile works!
-</p>
+<div class="container">
+
+  <br>
+
+  <div *ngIf="user">
+    <div class="row">
+      <div class="col" align="center">
+        <img class="rounded-circle" src="assets/img/{{user[0].username}}.jpg" alt="">\
+        <h1>{{ user[0].name }}</h1>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col" align=center>
+        <div class="card-group">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title"><b>General</b></h5>
+              <p>
+                Username: {{ user[0].username }} <br>
+                Email: {{ user[0].email }} <br>
+                Phone: {{ user[0].phone }} <br>
+                Website: {{ user[0].website }} <br>
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title"><b>Address</b></h5>
+              <p>
+                Street: {{ user[0].address.street }} <br>
+                Suite: {{ user[0].address.suite }} <br>
+                City: {{ user[0].address.city }} <br>
+                Zipcode: {{ user[0].address.zipcode}} <br>
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title"><b>Company</b></h5>
+              <p>
+                Name: {{ user[0].company.name }} <br>
+                Catch Phrase: {{ user[0].company.catchPhrase }} <br>
+                BS: {{ user[0].company.bs }} <br>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+  <br>
+
+</div>
