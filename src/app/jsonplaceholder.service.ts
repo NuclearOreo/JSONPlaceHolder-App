@@ -10,8 +10,13 @@ export class JsonplaceholderService {
 
   constructor(private http: HttpClient) { }
 
-  getPost(){
-    return this.http.get(this.url + 'posts');
+  getPost(userId?:string){
+    if(userId == undefined) {
+      return this.http.get(this.url + 'posts');
+    } else {
+      return this.http.get(this.url + 'posts/?userId=' + userId);
+    }
+
   }
 
   getComment(postId?:string){

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { JsonplaceholderService } from '../jsonplaceholder.service';
 
 @Component({
   selector: 'app-search',
@@ -8,10 +9,26 @@ import { Component, OnInit } from '@angular/core';
 export class SearchComponent implements OnInit {
 
   private username:string = '';
+  private posts:object;
 
-  constructor() { }
+  constructor(private service:JsonplaceholderService) { }
 
   ngOnInit() {
+  }
+
+  getPostForUser() {
+    this.service.getUser(this.username,undefined).subscribe(
+      (res) => {
+        let user = res;
+        if(user[0] != undefined){
+          this.service.getPost(user[0].id).subscribe(
+            (res) => {
+              this.posts = res;
+            }
+          );
+        }
+      }
+    );
   }
 
 }
