@@ -6,11 +6,15 @@ import { HttpClient } from '@angular/common/http';
 })
 export class JsonplaceholderService {
 
-  private url: string = 'https://jsonplaceholder.typicode.com/posts';
+  private url: string = 'https://jsonplaceholder.typicode.com/';
 
   constructor(private http: HttpClient) { }
 
   getPost(){
-    return this.http.get(this.url);
+    return this.http.get(this.url + 'posts');
+  }
+
+  getComment(){
+    return this.http.get(this.url + 'comments');
   }
 }

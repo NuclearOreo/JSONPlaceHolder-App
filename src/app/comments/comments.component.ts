@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { JsonplaceholderService } from '../jsonplaceholder.service';
 
 @Component({
   selector: 'app-comments',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./comments.component.css']
 })
 export class CommentsComponent implements OnInit {
+  comments:any;
 
-  constructor() { }
+  constructor(private service:JsonplaceholderService) { }
 
   ngOnInit() {
+    this.service.getComment().subscribe(
+      (res) => {
+        this.comments = res;
+        console.log(this.comments);
+      }
+    )
   }
 
 }
