@@ -2,26 +2,18 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.3.
 
+Making Angular App using JSON PlaceHolder as the API for this App. The purpose of this app is for me to pratice producing an Angular app and then use it as reference for myself for future Anuglar projects. This project is going to be a "Single-page application". It will be showing basic routing between components. There will four main components displayed on the navbar: Posts, Comments, Photos, and Users. The "Posts" component will show a list of posts. Each post can be be clicked on to show the contents of the post, same concept goes for the "Comments" component. The "Photos" component will show a gallery of photos from the API. The last component labelled "Users" will display a list of users. Each user can be clicked on to display a profile. Here's a link to the Repo The App will show basic routing between components, HTTP comsumption from an API, use of directive in pages, using services with components, and reusable components. Almost all the information displayed in this app will come from JSON PlaceHolder. It show will all the information from the API dynamically.
+
 ## Development server
+
+If you just clone the repo run `npm i` or `npm install`.
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Deploying on GitHub Pages
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+If you don't have "angular-cli-ghpages" run `sudo npm install -g angular-cli-ghpages` and continue on.
 
-## Build
+Run `ng build --prod --base-href "https://<user-name>.github.io/<repo>/"` to compile everything for th WebApp.
+After that run `sudo ngh --dist dist/[ProjectName]` and you should be all set.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
