@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { JsonplaceholderService } from '../jsonplaceholder.service';
+
 
 @Component({
   selector: 'app-posts',
@@ -8,15 +9,14 @@ import { HttpClient } from '@angular/common/http';
 })
 export class PostsComponent implements OnInit {
   list:any;
-  private url: string = 'https://jsonplaceholder.typicode.com/posts';
 
-  constructor(private http: HttpClient) { }
+  constructor(private service: JsonplaceholderService) { }
 
   ngOnInit() {
-    let obs = this.http.get(this.url);
-    obs.subscribe((res) => {
+    this.service.getPost().subscribe(
+      (res) => {
       this.list = res;
-      console.log(res);
-    });
+    }
+  );
   }
 }

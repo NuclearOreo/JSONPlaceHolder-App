@@ -12,6 +12,7 @@ import { PostsComponent } from './posts/posts.component';
 import { CommentsComponent } from './comments/comments.component';
 import { PhotosComponent } from './photos/photos.component';
 import { UsersComponent } from './users/users.component';
+import { JsonplaceholderService } from './jsonplaceholder.service'
 
 @NgModule({
   declarations: [
@@ -30,7 +31,9 @@ import { UsersComponent } from './users/users.component';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    JsonplaceholderService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
